@@ -2,7 +2,7 @@
 Team AngLe (Angela Chan and Leon Cheng)
 SoftDev2 pd3
 HW1b -- Finding Your Path Around the Canvas
-2016-02-10   
+2016-02-10
 */
 
 /* Testing if js imported */
