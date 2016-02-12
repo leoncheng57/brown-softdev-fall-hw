@@ -5,12 +5,11 @@ HW2 -- Dot, Dot, Dot
 2016-02-11
 */
 
-//TODO: Rem to add comments to your code
 /*
+TODO: Rem to add comments to your code
 Use preventDefault
   function(e)
   e.preventDefault()
-.clearRect(a, b, c, d)
 */
 
 console.log("hello")
@@ -66,8 +65,17 @@ var mouseCoors = function mouseCoors(event){
 
 c.addEventListener("click", mouseCoors);
 
-var clearPad = function clearPad(){
+/* CLEARS DRAWING PAD */
+//also resets px and py
+var clearPad = function clearPad(event){
+  event.preventDefault()
   ctx.clearRect(0, 0, 500, 500);
+  px = -1;
+  py = -1;
 };
+
+
+var b = document.getElementById("clear");
+b.addEventListener("click", clearPad);
 
 console.log("gbye")
