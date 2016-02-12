@@ -11,7 +11,6 @@ Use preventDefault
   function(e)
   e.preventDefault()
 .clearRect(a, b, c, d)
-<id>.addEventListener("click", fxn)
 */
 
 console.log("hello")
@@ -19,17 +18,21 @@ console.log("hello")
 var c = document.getElementById("playground")
 var ctx = c.getContext("2d")
 
+/* STORING THE ORIGINAL POINT TO START DRAWING THE LINE FROM */
+// px = previous x
+// py = previous y
+var px = -1;
+var py = -1;
+
 /* DRAW A LINE (ctx, x1, y1, x2, y2)*/
 var drawLine = function drawLine(ctx, x1, y1, x2, y2){
   ctx.beginPath();
-  ctx.strokeStyle="#FF0000";
+  ctx.strokeStyle="#071550";
   ctx.moveTo(x1, y1);
   ctx.lineTo(x2, y2);
   ctx.stroke();
   ctx.closePath();
 };
-
-drawLine(ctx, 40, 40, 200, 200);
 
 /* DRAW A CIRCLE/DOT (ctx, x, y) */
 var drawCircle = function drawCircle(ctx, x, y){
@@ -40,12 +43,7 @@ var drawCircle = function drawCircle(ctx, x, y){
   ctx.fill();
   ctx.stroke();
   ctx.closePath();
-  console.log("circle is drawn");
-  console.log("incircle. x: "+x + ", " + "y: "+ y);
 };
-
-drawCircle(ctx, 400, 400);
-
 
 /* FIND WHAT THE COORS OF THE MOUSE ARE WHEN CLICKED*/
 var mouseCoors = function mouseCoors(event){
@@ -56,11 +54,20 @@ var mouseCoors = function mouseCoors(event){
   x -= c.offsetLeft;
   y -= c.offsetTop;
   console.log("x: "+x + ", " + "y: "+ y);
+  //draw circle
   drawCircle(ctx, x, y);
+  //draw the line, make sure to update the px and py
+  if (px != -1 && py !=-1){
+    drawLine(ctx, px, py, x, y);
+  }
+  px = x;
+  py = y;
 };
 
 c.addEventListener("click", mouseCoors);
 
-
+var clearPad = function clearPad(){
+  ctx.clearRect(0, 0, 500, 500);
+};
 
 console.log("gbye")
