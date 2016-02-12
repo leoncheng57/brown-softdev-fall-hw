@@ -5,15 +5,10 @@ HW2 -- Dot, Dot, Dot
 2016-02-11
 */
 
-/*
-TODO: Rem to add comments to your code
-Use preventDefault
-  function(e)
-  e.preventDefault()
-*/
-
+/* BEGIN */
 console.log("hello")
 
+/* GET THE CANVAS OBJECT */
 var c = document.getElementById("playground")
 var ctx = c.getContext("2d")
 
@@ -45,17 +40,18 @@ var drawCircle = function drawCircle(ctx, x, y){
 };
 
 /* FIND WHAT THE COORS OF THE MOUSE ARE WHEN CLICKED*/
+/* DRAW THE CIRCLE/DOT AND LINE*/
 var mouseCoors = function mouseCoors(event){
   var x = event.pageX;
   var y = event.pageY;
-  //To fix the x and y coordinates to be relative to the canvas element box
+  //Offset to fix the x and y coordinates to be relative to the canvas element box
   //(0,0) is at the top left corner of the canvas box
   x -= c.offsetLeft;
   y -= c.offsetTop;
   console.log("x: "+x + ", " + "y: "+ y);
-  //draw circle
+  //Draw circle
   drawCircle(ctx, x, y);
-  //draw the line, make sure to update the px and py
+  //Draw the line, make sure to update the px and py
   if (px != -1 && py !=-1){
     drawLine(ctx, px, py, x, y);
   }
@@ -63,19 +59,22 @@ var mouseCoors = function mouseCoors(event){
   py = y;
 };
 
+/* ADD LISTENER TO THE CANVAS */
 c.addEventListener("click", mouseCoors);
 
 /* CLEARS DRAWING PAD */
-//also resets px and py
+//Also resets px and py
 var clearPad = function clearPad(event){
+  //Prevents button from redirecting to another link
   event.preventDefault()
   ctx.clearRect(0, 0, 500, 500);
   px = -1;
   py = -1;
 };
 
-
+/* ADD LISTENER TO THE BUTTON */
 var b = document.getElementById("clear");
 b.addEventListener("click", clearPad);
 
+/* END */
 console.log("gbye")
