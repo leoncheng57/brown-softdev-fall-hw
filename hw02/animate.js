@@ -40,12 +40,10 @@ var drawDot = function(){
   ctx.closePath();
 
   window.requestAnimationFrame(drawDot);
-
 }
 
 // Repeatedly Call the Function
-window.requestAnimationFrame(drawDot);
-
+drawDot();
 
 ctx.beginPath();
 ctx.arc(c.width/2, c.height/2, radius, 0, 2*Math.PI);
