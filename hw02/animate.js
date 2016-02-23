@@ -38,10 +38,13 @@ var drawDot = function(){
   ctx.stroke();
   ctx.fill();
   ctx.closePath();
+
+  window.requestAnimationFrame(drawDot);
+
 }
 
 // Repeatedly Call the Function
-window.requestAnimationFrame( drawDot );
+window.requestAnimationFrame(drawDot);
 
 
 ctx.beginPath();
