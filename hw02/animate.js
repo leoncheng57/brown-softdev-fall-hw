@@ -51,16 +51,16 @@ var drawDot = function(){
     // Periodically Call the Function
     window.requestAnimationFrame(drawDot);
   }
-
-  console.log(is_resetting);
 }
 
+//If start is called, stop the reset action, strat calling the drawDot callbacks loop
 var sb = document.getElementById("start");
 sb.addEventListener("click", function(){
   is_resetting = false;
   drawDot();
 });
 
+//If reset is pressed, set the variable true so that the drawDot callbacks loop is stopped, also set radius = 0
 var rb = document.getElementById("reset");
 rb.addEventListener("click", function(){
   is_resetting = true;
