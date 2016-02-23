@@ -1,7 +1,7 @@
 // Leon Cheng
 // SoftDev2 pd3
-// HW02 -- Circular
-// 2016-02-22
+// HW03 -- Are We Ever Going to Start the Movie?
+// 2016-02-23
 
 console.log("beginning js file")
 
