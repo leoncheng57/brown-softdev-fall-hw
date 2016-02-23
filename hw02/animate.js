@@ -64,8 +64,8 @@ sb.addEventListener("click", function(){
 var rb = document.getElementById("reset");
 rb.addEventListener("click", function(){
   is_resetting = true;
-  radius = 0;
-  growing = true;
+  // radius = 0;
+  // growing = true;
 });
 
 
