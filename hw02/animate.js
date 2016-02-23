@@ -13,6 +13,7 @@ var ctx = c.getContext("2d");
 var growing = true; //boolean to keep track of growing or shrinking
 var radius = 0;
 var is_resetting = false;
+var requestId; //ID for the Animation Frame to stop or to keep going
 
 
 var drawDot = function(){
@@ -49,7 +50,7 @@ var drawDot = function(){
   }
   else{
     // Periodically Call the Function
-    window.requestAnimationFrame(drawDot);
+    requestId = window.requestAnimationFrame(drawDot);
   }
 }
 
@@ -63,10 +64,15 @@ sb.addEventListener("click", function(){
 //If reset is pressed, set the variable true so that the drawDot callbacks loop is stopped, also set radius = 0
 var rb = document.getElementById("reset");
 rb.addEventListener("click", function(){
-  is_resetting = true;
+  // is_resetting = true;
+  stopIt();
   // radius = 0;
   // growing = true;
 });
 
+
+var stopIt = function(){
+  window.cancelAnimationFrame(requestId)
+}
 
 console.log("end of js file")
