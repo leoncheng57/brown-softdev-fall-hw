@@ -12,10 +12,12 @@ var ctx = c.getContext("2d");
 
 var growing = true; //boolean to keep track of growing or shrinking
 var radius = 0;
+var is_resetting = false;
+
 
 var drawDot = function(){
 
-  // Change Radius by increasing for decreasing
+  // Change Radius by increasing or decreasing
   if (growing){
     radius += 1;
   }
@@ -30,26 +32,40 @@ var drawDot = function(){
   else if (radius == 0){
     growing = true;
   }
+  console.log("radius: "+radius);
 
   //Draw the circle
+  ctx.clearRect(0, 0, c.width, c.height);
   ctx.beginPath();
   ctx.arc(c.width/2, c.height/2, radius, 0, 2*Math.PI);
-  ctx.fillStyle = "#000000"
+  ctx.fillStyle = "#ff6c24"
   ctx.stroke();
   ctx.fill();
   ctx.closePath();
 
-  window.requestAnimationFrame(drawDot);
+  //Exit the loop of callbacks if reset button is pressed
+  if(is_resetting){
+    return;
+  }
+  else{
+    // Periodically Call the Function
+    window.requestAnimationFrame(drawDot);
+  }
+
+  console.log(is_resetting);
 }
 
-// Repeatedly Call the Function
-drawDot();
+var sb = document.getElementById("start");
+sb.addEventListener("click", function(){
+  is_resetting = false;
+  drawDot();
+});
 
-ctx.beginPath();
-ctx.arc(c.width/2, c.height/2, radius, 0, 2*Math.PI);
-ctx.fillStyle = "#000000"
-ctx.stroke();
-ctx.fill();
-ctx.closePath();
+var rb = document.getElementById("reset");
+rb.addEventListener("click", function(){
+  is_resetting = true;
+  radius = 0;
+});
+
 
 console.log("end of js file")
