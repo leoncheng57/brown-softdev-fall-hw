@@ -17,14 +17,14 @@ var intervalID;
 
 var drawDot = function(){
   //Stops the circle from accelerating in size if you spammed the start button, by cancelling the previous call
-  window.cancelInterval(intervalID);
+  window.clearInterval(intervalID);
   // Change Radius by increasing or decreasing
   if(growing)
     radius += 1;
   else
     radius += 1;
   // Set it to either Growing or Shrinking
-  if(radius==c.width/2)
+  if(radius==pic.width/2)
     growing=false;
   else if (radius==0)
     growing = true;
@@ -39,6 +39,8 @@ var drawDot = function(){
   // Periodically Call the Function
   // requestId = window.requestAnimationFrame(drawDot);
 }
+
+window.setInterval(drawDot, 16);
 
 
 console.log("ending js file")
