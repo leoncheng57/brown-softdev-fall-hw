@@ -1,32 +1,44 @@
 console.log("beginning js file")
 
+//testing window.setInterval
+window.setInterval(function(){
+  console.log("tick");
+}, 16);
+
+//Get SVG element
 var pic = document.getElementById("vimage");
 
-var change = function(e){
-  e.preventDefault();
-  this.setAttribute("fill", "green");
-};
+/*===CODE FOR CIRCLE===*/
+var growing = true;
+//Radius of Circle
+var radius = 0;
+// ID for the Animation Frame to stop or to keep going
+var intervalID;
 
-var drawDot = function(x, y){
-  var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-  c.setAttribute("cx", x);
-  c.setAttribute("cy", y);
-  c.setAttribute("r", "30");
-  c.setAttribute("fill", "yellow");
+var drawDot = function(){
+  //Stops the circle from accelerating in size if you spammed the start button, by cancelling the previous call
+  window.cancelInterval(intervalID);
+  // Change Radius by increasing or decreasing
+  if(growing)
+    radius += 1;
+  else
+    radius += 1;
+  // Set it to either Growing or Shrinking
+  if(radius==c.width/2)
+    growing=false;
+  else if (radius==0)
+    growing = true;
+  //Draw the circle
+  var c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+  c.setAttribute("cx", pic.width/2);
+  c.setAttribute("cy", pic.height/2);
+  c.setAttribute("r", radius);
+  c.setAttribute("fill", "orange");
   c.setAttribute("stroke", "black");
-  c.addEventListener("click", change);
   pic.appendChild(c);
-};
-
-
-var clicked = function(e){
-  if(e.toElement==this){
-    drawDot(e.offsetX, e.offsetY);
-  }
-};
-
-// pic.addEventListener("click", clicked);
-windows.setInterval(drawDot, 16); //16 corresponds to about 60 frames per sec
+  // Periodically Call the Function
+  // requestId = window.requestAnimationFrame(drawDot);
+}
 
 
 console.log("ending js file")
