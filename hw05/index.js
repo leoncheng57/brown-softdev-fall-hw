@@ -13,11 +13,11 @@
 
 //IDEA: PUT THESE IN A CSV FILE, THEN LOAD IT IN
 var better = [
-    { state: "New York", count: 900},
-    { state: "California", count: 410},
-    { state: "Texas", count: 130},
-    { state: "New Hampshire", count: 310},
-    { state: "Washington", count: 102},
+    { state: "New York", count: 900, allocated: true},
+    { state: "California", count: 410, allocated: false},
+    { state: "Texas", count: 530, allocated: true},
+    { state: "New Hampshire", count: 310, allocated: true},
+    { state: "Washington", count: 202, allocated: false},
 ];
 
 d3.select(".chart")
@@ -26,9 +26,15 @@ d3.select(".chart")
     .enter().append("div")
     .style("width", function(d){
 	return d.count + "px";})
+    .style("background-color", function(d){
+	if(d.allocated) return "red";
+	else return "#FF6699"; //pink
+    })
     .text(function(d){
 	return d.state + ": " + d.count;
     })
+
+
 
 
     
