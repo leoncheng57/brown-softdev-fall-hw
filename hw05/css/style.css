@@ -11,9 +11,9 @@ img {
     height: 200px;
 }
 
-.total {
-    font: 30px sans-serif;
-    font-weight: bold;
+.totalDelegates {
+    font: 22px sans-serif;
+    font-style: italic;
 }
 
 #allocatedKey{

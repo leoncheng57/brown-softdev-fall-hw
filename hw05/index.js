@@ -92,9 +92,7 @@ d3.select(".chart")
 
 /* FINDING TOTAL DELEGATES*/
 d3.select(".totalDelegates")
-    .insert("p").attr("class", "total")
-    .text("Total Delegates: ")
-    .append("p").attr("class", "total")
+    .append("p")
     .text(function(){
 	var total = 0;
 	console.log(data);
@@ -102,12 +100,10 @@ d3.select(".totalDelegates")
 	    total+=data[i].count;
 	    console.log(total);
 	}
-	return total;
+	return "Total Delegates: " + total;
     })
 //total allocated
-    .append("p").attr("class", "total")
-    .text("Total Delegates: ")
-    .append("p").attr("class", "total")
+    .append("p")
     .text(function(){
 	var total = 0;
 	console.log(data);
@@ -115,12 +111,10 @@ d3.select(".totalDelegates")
 	    if(data[i].allocated) total+=data[i].count;
 	    console.log(total);
 	}
-	return total;
+	return "Allocated: " + total;
     })
 //total unallocated
-    .append("p").attr("class", "total")
-    .text("Total Delegates: ")
-    .append("p").attr("class", "total")
+    .append("p")
     .text(function(){
 	var total = 0;
 	console.log(data);
@@ -128,6 +122,6 @@ d3.select(".totalDelegates")
 	    if (!data[i].allocated) total+=data[i].count;
 	    console.log(total);
 	}
-	return total;
+	return "Unallocated: " + total;
     })
 
