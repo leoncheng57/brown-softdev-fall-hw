@@ -11,7 +11,39 @@
 
 // d3.select("body").append("p").text("New paragarph!");
 
-//IDEA: PUT THESE IN A CSV FILE, THEN LOAD IT IN
+
+var data = [
+    ["New York", 320, true],
+    ["California", 310, false],
+    ["Texas", 421, true],
+    ["New Hampshire", 942, true],
+    ["Washington", 321, false],
+]
+
+for (var i = 0; i<data.length; i++){
+    console.log(data[i]);
+}
+
+
+var data2 = "New York,320,true,\
+California,310,false,\
+Texas,421,true,\
+New Hampshire,942,true,\
+Washington,321,false,\
+"
+
+var data3 = data2.split(",");
+for (var i = 0; i<data3.length; i++){
+    if (i%3==0) console.log("state: " + data3[i]);
+    if (i%3==1) console.log("count: " + data3[i]);
+    if (i%3==2) console.log("allocated: "+data3[i]);
+}
+
+
+
+
+
+
 var better = [
     { state: "New York", count: 900, allocated: true},
     { state: "California", count: 410, allocated: false},
@@ -36,5 +68,6 @@ d3.select(".chart")
 
 
 
-
     
+
+
