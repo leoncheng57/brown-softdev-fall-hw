@@ -3,7 +3,11 @@
     background-color: red;
     text-align: right;
     padding: 3px;
-    margin: 1px;
+    margin: 2px;
     color: white;
 }
 
+img {
+    width: 200px;
+    height: 200px;
+}

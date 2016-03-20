@@ -1,0 +1,8 @@
+* _Assignment_: https://docs.google.com/document/d/1zV8rSar5R_axuHao-5mG53DCXGWL5xc-0fa4wRMV7Wo/pub
+* *D3 Tutorial*: http://alignedleft.com/tutorials/d3/
+** im up to: http://alignedleft.com/tutorials/d3/using-your-data
+* *API Reference*: https://github.com/mbostock/d3/wiki/API-Reference
+* Data
+** API calls, Election Polls: http://bl.ocks.org/bycoffe/3924854
+** State Count: http://www.electoral-vote.com/evp2016/Info/delegates.html
+
