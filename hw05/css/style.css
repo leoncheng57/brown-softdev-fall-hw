@@ -15,3 +15,18 @@ img {
     font: 30px sans-serif;
     font-weight: bold;
 }
+
+#allocatedKey{
+    background-color:red;
+    width: 76px;
+    color: blue;
+    font-weight:bold;
+}
+
+#unallocatedKey{
+    background-color:#FF6699;
+    width: 96px;
+    color: blue;
+    font-weight:bold;
+}
+

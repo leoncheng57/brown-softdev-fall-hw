@@ -5,4 +5,4 @@
 * Data
 ** API calls, Election Polls: http://bl.ocks.org/bycoffe/3924854
 ** State Count: http://www.electoral-vote.com/evp2016/Info/delegates.html
-
+** State Count: http://www.electionprojection.com/republican-nomination-delegates/
