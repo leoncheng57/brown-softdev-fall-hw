@@ -1,5 +1,5 @@
 .chart div {
-    font: 24px sans-serif;
+    font: 18px sans-serif;
     text-align: right;
     padding: 3px;
     margin: 2px;
@@ -9,4 +9,9 @@
 img {
     width: 200px;
     height: 200px;
+}
+
+.total {
+    font: 30px sans-serif;
+    font-weight: bold;
 }
