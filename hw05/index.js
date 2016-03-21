@@ -69,7 +69,7 @@ Wyoming,29,true,\
 
 var rawDemocrats = "Alabama,58,true,\
 Alaska,18,true,\
-Amer. Samoa,10,false,\
+American Samoa,10,false,\
 Arizona,75,false,\
 Arkansas,37,true,\
 California,476,false,\
@@ -148,6 +148,9 @@ d3.select(".chart")
     .selectAll("div")
     .data(data)
     .enter().append("div")
+    .style("width","10px")
+    .transition()
+    .duration(400)
     .style("width", function(d){
 	return d.count*scaleWidth + "px";})
     .style("background-color", function(d){
