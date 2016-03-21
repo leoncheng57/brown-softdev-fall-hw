@@ -60,7 +60,7 @@ Wyoming,29,true,\
 "
 */
 
-var raw = "Alabama,58,true,\
+var rawDemocrats = "Alabama,58,true,\
 Alaska,18,true,\
 Amer. Samoa,10,false,\
 Arizona,75,false,\
@@ -121,7 +121,7 @@ Unassigned,1,false,\
 "
 
 /* PARSING RAW INTO DATA DICT */
-var list = raw.split(","); //used to help parse the raw string
+var list = rawDemocrats.split(","); //used to help parse the raw string
 var data = []; //A dictionary with all the data in it (state, count, allocated)
 for (var i = 0; i+2<list.length; i++){
     if (i%3==0) {
