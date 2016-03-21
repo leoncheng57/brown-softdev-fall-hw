@@ -1,8 +1,8 @@
 .chart div {
-    font: 18px sans-serif;
+    font: 14px sans-serif;
     text-align: right;
     padding: 3px;
-    margin: 2px;
+    margin: 6px;
     color: white;
 }
 
@@ -17,16 +17,16 @@ img {
 }
 
 #allocatedKey{
-    background-color:red;
+    background-color:#0033cc;
     width: 76px;
-    color: blue;
+    color: white;
     font-weight:bold;
 }
 
 #unallocatedKey{
-    background-color:#FF6699;
+    background-color:#668cff;
     width: 96px;
-    color: blue;
+    color: white;
     font-weight:bold;
 }
 

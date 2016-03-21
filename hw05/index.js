@@ -1,7 +1,14 @@
+// Leon Cheng with Angela Chan
+// SoftDev2 pd3
+// HW05 -- The Best Defense Against Tyranny...
+// 2016-03-21
+
+
 /* RAW DATA */
 //NOTE: must not put any spaces around the commas
+
 /*
-var raw = "Alabama,50,true,\
+var rawRepublican = "Alabama,50,true,\
 Alaska,28,true,\
 American Samoa,9,false,\
 Arizona,58,false,\
@@ -144,8 +151,8 @@ d3.select(".chart")
     .style("width", function(d){
 	return d.count*scaleWidth + "px";})
     .style("background-color", function(d){
-	if(d.allocated) return "red";
-	else return "#FF6699"; //pink
+	if(d.allocated) return "#0033cc";
+	else return "#668cff";
     })
     .text(function(d){
 	return d.state + ": " + d.count;
