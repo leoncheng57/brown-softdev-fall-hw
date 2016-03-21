@@ -1,5 +1,6 @@
 /* RAW DATA */
 //NOTE: must not put any spaces around the commas
+/*
 var raw = "Alabama,50,true,\
 Alaska,28,true,\
 American Samoa,9,false,\
@@ -56,6 +57,67 @@ Washington,44,false,\
 West Virginia,34,false,\
 Wisconsin,42,false,\
 Wyoming,29,true,\
+"
+*/
+
+var raw = "Alabama,58,true,\
+Alaska,18,true,\
+Amer. Samoa,10,false,\
+Arizona,75,false,\
+Arkansas,37,true,\
+California,476,false,\
+Colorado,77,true,\
+Connecticut,65,false,\
+Delaware,27,false,\
+D.C.,37,true,\
+Florida,238,true,\
+Georgia,112,true,\
+Guam,11,true,\
+Hawaii,31,true,\
+Idaho,24,true,\
+Illinois,190,true,\
+Indiana,79,false,\
+Iowa,54,true,\
+Kansas,37,true,\
+Kentucky,53,true,\
+Louisiana,61,true,\
+Maine,30,true,\
+Maryland,105,false,\
+Massachusetts,121,true,\
+Michigan,152,true,\
+Minnesota,94,true,\
+Mississippi,41,true,\
+Missouri,88,true,\
+Montana,22,false,\
+Nebraska,31,false,\
+Nevada,39,true,\
+New Hampshire,32,true,\
+New Jersey,126,false,\
+New Mexico,38,false,\
+New York,277,false,\
+North Carolina,120,true,\
+North Dakota,19,false,\
+N. Marianas,11,true,\
+Ohio,165,true,\
+Oklahoma,42,true,\
+Oregon,64,false,\
+Pennsylvania,181,false,\
+Puerto Rico,58,true,\
+Rhode Island,31,false,\
+South Carolina,57,true,\
+South Dakota,20,false,\
+Tennessee,77,true,\
+Texas,237,true,\
+Utah,28,false,\
+Vermont,23,true,\
+Virgin Islands,11,true,\
+Virginia,112,true,\
+Washington,102,false,\
+West Virginia,35,false,\
+Wisconsin,89,false,\
+Wyoming,17,true,\
+Democrats Abroad,17,false,\
+Unassigned,1,false,\
 "
 
 /* PARSING RAW INTO DATA DICT */
