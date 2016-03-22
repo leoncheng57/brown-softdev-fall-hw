@@ -1,0 +1,11 @@
+
+.pageBox{
+    width: 49.6%;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.pageElement{
+    width: 500px; 
+    height: 200px;
+}

@@ -1,0 +1,12 @@
+    <center><a href="foo.html"><button>Link to foo.html</button></a></center>
+    <div class="pageBox" style="float: right;">
+      <object class="pageObject" data="foo.html">
+	<embed src="foo.html"> </embed> 
+      </object>
+    </div>
+    <div class="pageBox" style="float: left;">
+      <object class="pageObject" data="foo.html">
+	<embed src="foo.html"> </embed> 
+      </object>
+    </div>
+    <br>

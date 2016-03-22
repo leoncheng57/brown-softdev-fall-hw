@@ -1,0 +1,10 @@
+.pageBox{
+    width: 49.6%;
+    height: 1000px;
+    border: 2px solid black;
+}
+
+.pageObject{
+    width: 100%; 
+    height: 1000px;
+}
