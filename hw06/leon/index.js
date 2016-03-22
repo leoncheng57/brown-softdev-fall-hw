@@ -1,6 +1,6 @@
 // Leon Cheng with Angela Chan
 // SoftDev2 pd3
-// HW05 -- The Best Defense Against Tyranny...
+// HW06
 // 2016-03-21
 
 

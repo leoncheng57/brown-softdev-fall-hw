@@ -1,0 +1,42 @@
+.chart div {
+    font: 18px sans-serif;
+    text-align: right;
+    padding: 3px;
+    margin: 8px;
+    color: white;
+}
+
+img {
+    width: 350px;
+    height: 300px;
+}
+
+.totalDelegates {
+    font: 22px sans-serif;
+    font-style: italic;
+}
+
+#allocatedKey{
+    background-color:#0033cc;
+    width: 76px;
+    color: white;
+    font-weight:bold;
+}
+
+#unallocatedKey{
+    background-color:#668cff;
+    width: 96px;
+    color: white;
+    font-weight:bold;
+}
+
+.pageBox{
+    width: 49.6%;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.pageElement{
+    width: 500px; 
+    height: 200px;
+}

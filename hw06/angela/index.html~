@@ -1,0 +1,95 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <!--
+            <style>
+                .chart div{
+                    font: 10px sans-serif;
+                    background-color: steelblue;
+                    text-align: right;
+                    padding: 3px;
+                    margin: 1px;
+                    color: white;
+                    border: none;
+                }
+            </style>
+            -->
+            <link rel="stylesheet" href="./css/style.css"/>
+        </head>
+        <body>
+            <center>
+                <img src="./elephant.png"
+                     style="width:15vw;
+                            height:23vh;">
+                <h1>Republican Convention Delegates by State</h1>
+                <h3>
+                    Total Delegates: 2472
+                    <br>
+                    Total Allocated: 1408 &emsp; Total Unallocated: 1064
+                </h3>
+                <b>
+                    <p style="display: inline;
+                              color: #8C1515">
+                        Trump: 678 &emsp;
+                    </p>
+                    <p style="display: inline;
+                              color: #B23535">
+                        Cruz: 423 &emsp;
+                    </p>
+                    <p style="display: inline;
+                              color: #D86161">
+                        Rubio: 164 &emsp;
+                    </p>
+                    <p style="display: inline;
+                              color: #FE9898">
+                        Kasich: 143
+                    </p>
+                </b>
+            </center>
+            <div class="chart">
+                <!--
+                <div style="width:50px; display:inline-block; visibility:hidden;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                <div style="width:50px; display:inline-block;">5</div>
+                -->
+            </div>
+
+        </body>
+        <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="index.js"></script>
+        <!--
+        <script>
+            var data = [4, 8, 15, 16, 23, 42];
+            var chart = d3.select(".chart");
+            var bar = chart.selectAll("div");
+            var barUpdate = bar.data(data);
+            var barEnter = barUpdate.enter().append("div");
+            barEnter.style("width", function(d){
+                return d*10+"px";
+            });
+            barEnter.text(function(d){
+                return d;
+            });
+        </script>
+        -->
+        <!--
+        <script>
+            var data = [4, 8, 15, 16, 23, 42];
+            d3.select(".chart")
+              .selectAll("div")
+                .data(data)
+              .enter().append("div")
+                .style("width", function(d) {
+                    return d*10 + "px"; })
+                .text(function(d) { return d; });
+        </script>
+        -->
+    </html>
+</DOCTYPE>
