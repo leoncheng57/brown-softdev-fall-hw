@@ -142,17 +142,17 @@ for (var i = 0; i+2<list.length; i++){
 }
 
 /* MAKING BAR CHART */
-var scaleWidth = 5; //how much to scale up the width by
+var scaleWidth = 0.2; //how much to scale up the width by
 //to make bars prettier on screen
 d3.select(".chart")
     .selectAll("div")
     .data(data)
     .enter().append("div")
-    .style("width","10px")
+    .style("width","0px")
     .transition()
-    .duration(400)
+    .duration(800)
     .style("width", function(d){
-	return d.count*scaleWidth + "px";})
+	return d.count*scaleWidth + "%";})
     .style("background-color", function(d){
 	if(d.allocated) return "#0033cc";
 	else return "#668cff";
