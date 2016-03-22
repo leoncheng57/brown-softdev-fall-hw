@@ -149,6 +149,8 @@ d3.select(".chart")
     .data(data)
     .enter().append("div")
     .style("width","10px")
+    .transition()
+    .duration(400)
     .style("width", function(d){
 	return d.count*scaleWidth + "px";})
     .style("background-color", function(d){
