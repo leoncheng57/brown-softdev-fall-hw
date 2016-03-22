@@ -30,3 +30,13 @@ img {
     font-weight:bold;
 }
 
+.pageBox{
+    width: 49.6%;
+    height: 200px;
+    border: 3px solid black;
+}
+
+.pageElement{
+    width: 500px; 
+    height: 200px;
+}
