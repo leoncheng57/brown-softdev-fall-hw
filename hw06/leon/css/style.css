@@ -1,6 +1,9 @@
 .chart div {
     font: 12px sans-serif;
-    text-align: right;
+    float: right;
+    clear: right;
+    right: 0px;
+    text-align: left;
     padding: 3px;
     margin: 10px;
     color: white;
