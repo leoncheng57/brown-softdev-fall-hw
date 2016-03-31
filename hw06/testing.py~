@@ -1,0 +1,3 @@
+squares = []
+for x in range(8):
+    squares.append(x**2)
