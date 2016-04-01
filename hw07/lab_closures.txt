@@ -1,0 +1,100 @@
+Software Development
+LAB: Closures in Python
+(HW07)
+
+
+
+*******************************************************
+a CLOSURE is a function that refers to independent variables, such that the function defined in the closure "remembers" the environment in which it was created.
+*******************************************************
+
+Confused? Examples help with that...
+
+
+First, a bit of Python background. In case you did not know, you can use Python functions as variables. Exempli gratia, 
+
+-----------------------
+def inc(x):
+    return x + 1
+
+f = inc
+
+print f(10)
+-----------------------
+
+(Run the above code. Did it print what you expected?)
+
+
+
+Now more Python errata: Did you know...
+ * Your old Scheme friend lambda is frequently spotted in the wild, well outside the realm of IntroCS1?
+ * Python allows you to define a function within a function?
+
+
+As you may remember it being used in Scheme, lambda is used here in function h() to create a function literal without a name (an 'anonymous function').
+-----------------------
+def h(x):
+    return lambda y: x + y
+-----------------------
+
+To get a feel for this, try defining h as shown, then examining the output of these calls:
+
+h(1)
+h(2)
+h(1)(3)
+h(2)(5)
+
+Conclusions?  (You are encouraged to utilize your neighbours...)
+
+
+NOW, stand back, we are about to "try science!" as it were...
+
+This command creates a closure, by binding variables:
+-----------------------
+b=h(1)
+-----------------------
+
+
+
+
+
+
+Q: Which of the four h() calls above would you say also created closures?
+
+
+
+
+
+
+
+Now for a non-anonymous function within a function:
+-----------------------
+def f(x):
+    def g(y):
+        return x + y
+    return g
+-----------------------
+
+Test drive this as with h earlier (use similar fxn calls) Again, make full use of neighbours...
+
+
+Conclusions?  
+
+
+SO: a & b below each constitue a closure:
+
+a=f(1)
+b=h(1)
+
+
+
+
+=======================================================
+TASK: 
+Write a closure with outer function named 'repeat'
+ such that the function calls shown below will yield the outputs shown.
+
+print r1(2) -> hellohello
+print r2(2) -> goodbyegoodbye
+print repeat('cool')(3) -> coolcoolcool
+=======================================================
