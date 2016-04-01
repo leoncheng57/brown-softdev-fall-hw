@@ -47,6 +47,6 @@ def task2(s):
 print task2("123")
 print task2("password")
 print task2("BetterPasswod!!")
-print task2("Hello123!@@!##$!@$!%")
+print task2("Hello123!@@!@$!%")
 print task2("hellowhatishappeninghtereinlifehonesltythosnowwhatlonger")
 
