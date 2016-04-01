@@ -46,12 +46,6 @@ h(2)(5)
 
 Conclusions?  (You are encouraged to utilize your neighbours...)
 
-/*
-MY CONCLUSIONS
-- returns a fxn
-- first var is for outside fxn, second var is for inside fxn
-- remembers variables? if they are defined inside the fxn
-*/
 
 NOW, stand back, we are about to "try science!" as it were...
 
@@ -67,9 +61,9 @@ b=h(1)
 
 Q: Which of the four h() calls above would you say also created closures?
 
-/*
-All of them?
-*/
+
+
+
 
 
 
@@ -92,10 +86,7 @@ SO: a & b below each constitue a closure:
 a=f(1)
 b=h(1)
 
-/*
-SO like a closure is a fxn with a variable binded? to it?
-and it is created by defining a fxn within a fxn
-*/
+
 
 
 =======================================================

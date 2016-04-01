@@ -1,7 +1,22 @@
-def inc(x):
-    return x + 1
+def repeat(s):
+    def r1(n):
+        i = 0;
+        result=""
+        while(i<n):
+            result+=s
+            i+=1
+        return result
+    return r1
 
-f = inc
+print repeat("cool")(3)
 
-print inc(10)
-print f(10)
+# def r1(n):
+#     s = "hello"
+#     i = 0;
+#     result=""
+#     while(i<n):
+#         result+=s
+#         i+=1
+#     return result
+
+# print r1(2)
