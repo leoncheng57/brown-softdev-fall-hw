@@ -10,13 +10,6 @@ def repeat(s):
 
 print repeat("cool")(3)
 
-# def r1(n):
-#     s = "hello"
-#     i = 0;
-#     result=""
-#     while(i<n):
-#         result+=s
-#         i+=1
-#     return result
+def r1
 
-# print r1(2)
+def r2
