@@ -60,15 +60,10 @@ This command creates a closure, by binding variables:
 b=h(1)
 -----------------------
 
-
-
-
-
-
 Q: Which of the four h() calls above would you say also created closures?
 
 /*
-All of them?
+The ones with one variable h(1), h(2)?
 */
 
 
