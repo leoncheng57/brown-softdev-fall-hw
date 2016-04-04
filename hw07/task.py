@@ -1,21 +1,13 @@
 def repeat(s):
     def r(n):
-        i = 0
-        result = ""
-        while(i<n):
-            result += s
-            i+=1
-        return result
+        return n*s #you can multiply a string
     return r
 
-def r1(n):
-    return repeat("hello")(n)
+r1 = repeat("hello")
 
-def r2(n):
-    return repeat("goodbye")(n)
+r2 = repeat("cool")
 
-def r3(n):
-    return repeat("closures!")(n)
+r3 = repeat("closures!")
 
 print repeat("cool")(3)
 print r1(2)
