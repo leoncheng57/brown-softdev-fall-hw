@@ -1,0 +1,5 @@
+def qsort(L):
+    if len(L) <= 1:
+        return L
+    pivot = random.choice(L)
+    
