@@ -1,7 +1,5 @@
-def repeat(s):
-    def r(n):
-        return n*s #you can multiply a string
-    return r
+def repeat(string):
+    return lambda n: n*string;
 
 r1 = repeat("hello")
 
