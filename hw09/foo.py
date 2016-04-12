@@ -18,8 +18,9 @@ def name_log(f):
 def timer(f):
     def inner( *arg ):
         t = time.time()
+        x = f(*arg)
         print 'execution time: ' + str(time.time() - t)
-        return f(*arg)
+        return x
     return inner
 
 @timer
