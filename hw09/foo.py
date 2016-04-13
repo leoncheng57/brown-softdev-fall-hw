@@ -11,7 +11,7 @@ import time
 
 def name_log(f):
     def inner( *arg ):
-        print f.func_name + ": " + str(arg)
+        print f.func_name + ": " + str(*arg)
         return f(*arg)
     return inner
 
